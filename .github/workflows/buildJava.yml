@@ -18,6 +18,6 @@ jobs:
           java-version: '21'
       - name: Maven Tests Run SonarCloud Analysis
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-          -Dsonar.projectKey=CERI-M1-DevOps_tpintegrationcontinue-tiagofdev \
+          -Dsonar.projectKey=CERI-M1-DevOps:tpintegrationcontinue-tiagofdev \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-          -Dsonar.branch.name=${{ github.ref_name }}
+          -Dsonar.branch.name="main"
