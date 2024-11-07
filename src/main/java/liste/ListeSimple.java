@@ -4,15 +4,28 @@ public class ListeSimple {
     private long size;
     Noeud tete;
 
+    /**
+     * Get Size
+     * @return size
+     */
     public long getSize() {
         return size;
     }
 
+    /**
+     *
+     * @param element
+     */
     public void ajout(int element) {
         tete = new Noeud(element, tete);
         size++;
     }
 
+    /**
+     *
+     * @param element
+     * @param nouvelleValeur
+     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
@@ -21,6 +34,11 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
+    /**
+     *
+     * @param element
+     * @param nouvelleValeur
+     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -30,6 +48,10 @@ public class ListeSimple {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
@@ -43,6 +65,10 @@ public class ListeSimple {
         return sb.toString();
     }
 
+    /**
+     *
+     * @param element
+     */
     public void supprimePremier(Object element) {
         if (tete != null) {
             if (tete.getElement() == element) {
@@ -63,6 +89,10 @@ public class ListeSimple {
         }
     }
 
+    /**
+     *
+     * @param element
+     */
     public void supprimeTous(int element) {
        tete = supprimeTousRecurs(element, tete);
     }
@@ -80,6 +110,10 @@ public class ListeSimple {
         } else return null;
     }
 
+    /**
+     *
+     * @return
+     */
     public Noeud getAvantDernier() {
         if (tete == null || tete.getSuivant() == null)
             return null;
@@ -94,6 +128,9 @@ public class ListeSimple {
         }
     }
 
+    /**
+     *
+     */
     public void inverser() {
         Noeud precedent = null;
         Noeud courant = tete;
@@ -106,6 +143,11 @@ public class ListeSimple {
         tete = precedent;
     }
 
+    /**
+     *
+     * @param r
+     * @return
+     */
     public Noeud getPrecedent(Noeud r) {
     // la liste n'est pas vide puisqu'on transmet un Node de la liste et le Node existe obligatoirement
         Noeud precedent = tete;
@@ -117,6 +159,11 @@ public class ListeSimple {
         return precedent;
     }
 
+    /**
+     *
+     * @param r1
+     * @param r2
+     */
     public void echanger(Noeud r1, Noeud r2) {
         if (r1 == r2)
             return;
