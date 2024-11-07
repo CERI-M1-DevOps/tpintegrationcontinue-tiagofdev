@@ -13,6 +13,11 @@ public class ListeSimple {
         size++;
     }
 
+    /**
+     * 
+     * @param element
+     * @param nouvelleValeur
+     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
