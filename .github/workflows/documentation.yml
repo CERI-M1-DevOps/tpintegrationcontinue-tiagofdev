@@ -2,8 +2,7 @@
 #
 #on:
 #  pull_request:
-#    types:
-#      - closed
+#    types: ["closed"]
 #
 #jobs:
 #  if_merged:
