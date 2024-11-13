@@ -18,7 +18,7 @@ jobs:
       - name: Initialisation de JDK
         uses: actions/setup-java@v2
         with:
-          distribution: 'corretto'
+          distribution: 'temurin'
           java-version: '21'
 
       - name: Générer Javadoc
